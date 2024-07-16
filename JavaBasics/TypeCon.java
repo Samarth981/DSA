@@ -47,8 +47,6 @@ public class TypeCon{
         // int p = 105;
         // char y = p;
         // System.out.println(y); //it is not posible
-
-        // Type Promotion
     }
 }
 
