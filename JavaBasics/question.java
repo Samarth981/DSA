@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class question {
@@ -48,5 +47,18 @@ public class question {
             text = (int)(income * 0.30);
         }
         System.out.println("Your text is : "+text);
+
+
+        //check the leep year
+        //concept -> year/400 ,  year%4==0 && year%100!=0 then leep year
+
+        int year = sc.nextInt();
+        if(year%400 == 0){
+            System.out.println("this year is leep year");
+        } else if(year%4==0 && year%100 !=0){
+            System.out.println("this year is leep year");
+        } else {
+            System.out.println("this year is not leep year");   
+        }
     }
 }
