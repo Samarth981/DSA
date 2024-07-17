@@ -14,9 +14,25 @@ public class LoopQuetion {
                 SumOfOdd = SumOfOdd + number;
             }
             System.out.println("if you want to continue? press 1 for yes and 0 for no");
-            choice = sc.nextInt();
+            choice = sc.nextInt();                                                                                                                                                                                                                                          
         }while(choice == 1);
             System.out.println("sum of even number : " + SumOfEven);
             System.out.println("sum of odd number : " + SumOfOdd);
+
+            //fectorial
+            int a = sc.nextInt();
+            int fact = 1;
+            for(int i=1; i<=a; i++){
+                fact = fact*i;
+            }
+            System.out.println(fact);
+
+            // muliplication table
+            int muli;
+            for(int i=1 ; i<=10; i++){
+                muli = a*i;
+                System.out.println(a + "*" + i + "=" + muli);
+            }
+            
     }
 }
