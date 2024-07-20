@@ -72,7 +72,9 @@ public class function {
         }
         return true;
     }
-
+    public static boolean   PrimeinRange(int a){
+        for(int i=2; i<=Math.sqrt(a); i++){
+    }
 
 
 
