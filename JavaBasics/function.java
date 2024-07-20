@@ -72,15 +72,61 @@ public class function {
         }
         return true;
     }
-    public static boolean   PrimeinRange(int a){
-        for(int i=2; i<=Math.sqrt(a); i++){
+    public static void PrimeinRange(int n){
+        for(int i=2; i<=n; i++){
+            if(isprime(i)){
+                System.out.print(i+ " ");
+            }
+        }
+        System.out.println();
+    }
+    public static void bintoDec(int binNum){
+        int mynum = binNum;
+        int pow = 0;
+        int decNum = 0;
+
+        while(binNum>0){
+            int lastDigit = binNum%10;
+            decNum = decNum + (lastDigit* (int)Math.pow(2, pow));
+            pow++;
+            binNum = binNum/10;
+        }
+        System.out.println("decimal of " + mynum + "= " + decNum);
     }
 
+    public static void dectoBin(int n){
+        int mynum = n;
+        int pow = 0;
+        int binNum = 0;
+    
+        while(n>0){
+            int remander = n%2;
+            binNum = binNum + (remander* (int)Math.pow(10, pow));
+            pow++;
+            n = n/2;
+        }
+        System.out.println("binary of " + mynum + "= " + binNum);
+    }
 
-
-
-
-
+    public static int reversNum(int n){
+        int newNum = 0;
+        while(n>0){
+            int remander = n%10;
+            newNum = newNum*10+remander;
+            n = n/10;   
+        }
+        return newNum;
+    }
+    public static void  palandromNum(int n){
+        int revers = reversNum(n);
+        if(n == revers){
+            System.out.println("this number is plandrome");
+        }else if(n==0){
+            System.out.println("this number is plandrome");
+        }else{
+            System.out.println("this number is not plandrome");
+        }
+    }
 
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -106,6 +152,13 @@ public class function {
 
         System.out.println(sum(5, 5, 10));
 
-        System.out.println(isprime(5));
+        System.out.println(isprime(100));
+
+       PrimeinRange(10);
+
+       bintoDec(1010100);
+
+       dectoBin(5);
+       palandromNum(1341);
     }
 }
