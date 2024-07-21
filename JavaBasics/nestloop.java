@@ -34,6 +34,34 @@ public class nestloop {
             }
             System.out.println();
         }
+
+        //using while loop
+        int p = 5;
+        int Total_Number_Of_Line = p;
+
+        int star = 1;
+        int space = p-1;
+
+        int Currant_Number_Of_Line = 1;
+
+        while (Currant_Number_Of_Line<=Total_Number_Of_Line) {
+            //print  space
+            for(int i=1; i<=space; i++){
+                System.out.print(" ");
+            }
+            //print start
+            for(int i=1; i<=star; i++){
+                System.out.print("*");
+            }
+
+            //nestline
+            System.out.println();
+            star++;
+            space--;
+            Currant_Number_Of_Line++;            
+        }
+
+
         
         //floyd's triangle
         int n=6;
