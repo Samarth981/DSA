@@ -2,6 +2,7 @@ import java.util.*;
 
 // array quetion
 public class Array {
+
     //Largest number in Array
     public static int largest_num(int number[]){
         int largest = Integer.MIN_VALUE; //-infinet
@@ -38,6 +39,5 @@ public class Array {
         //largest
         int number[] = {2,4,6,7,4,8,9};
         System.out.println("largest value is :"+ largest_num(number));
-
     }
 }
