@@ -1,5 +1,5 @@
 //time complexcity is depend on hight like how many pillar are  in there
-//so tc = O(n)
+//so tc = O(n) ; sc = O(n);
 public class Trap_RainWAter {
     public static int  TrapWater(int h[]){
         int width = 1;
