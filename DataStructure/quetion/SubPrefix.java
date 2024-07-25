@@ -1,5 +1,5 @@
-// //prfix tecnic
-
+// prfix tecnic
+// time complex -> O(n^2)
 // //find max and min sum of sub array
 
 public class SubPrefix {

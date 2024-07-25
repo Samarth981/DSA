@@ -5,9 +5,9 @@ public class subArray {
         int sum = 0;
         int lasgest = Integer.MIN_VALUE;
         int smallest = Integer.MAX_VALUE;
-        for(int i=0;i<number.length;i++){
-            // find last
-            for(int j=i; j<number.length; j++){
+
+        for(int i=0;i<number.length;i++){ //fist
+            for(int j=i; j<number.length; j++){ //last
                 ts++;
 
                 //print subarray
@@ -17,6 +17,7 @@ public class subArray {
                     sum = sum+number[k];
                 }
                 System.out.print("sum: "+ sum);
+
                 //check smallest and largest
                 if(sum>lasgest){
                     lasgest = sum;
@@ -29,6 +30,7 @@ public class subArray {
             }
             System.out.println();
         }
+        
         System.out.println("total sub Array: " + ts);
         System.out.println("largest: "+ lasgest);
         System.out.println("smallest: "+ smallest);
