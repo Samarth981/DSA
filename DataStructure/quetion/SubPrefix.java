@@ -19,7 +19,7 @@ public class SubPrefix {
 
         // Calculate subarray sums using prefix array
         for (int i = 0; i < number.length; i++) {
-            for (int j = i; j < number.length; j++) {
+            for (int j = i; j < number.length; j++) {   
                 sum = i == 0 ? prefix[j] : prefix[j] - prefix[i - 1];
 
                 if (sum > largest) {
@@ -34,9 +34,8 @@ public class SubPrefix {
         System.out.println("Largest sum: " + largest);
         System.out.println("Smallest sum: " + smallest);
     }
-
     public static void main(String[] args) {
-        int number[] = {1, -2, -6, -1, 3};
+        int number[] = {2,7,11,15};
         sub(number);
     }
 }
