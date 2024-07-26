@@ -1,3 +1,7 @@
+// tc = O(log bas 2 n) like (log2n) 
+//logn == n , n/2 , n/4, n/6 .... 1
+//emaple in linear search operation is 10^9 then tc = 10^9 but in binaray search like 32 or 33
+
 public class BinerySearch {
     public static int binerySearch(int number[], int key){
         int start = 0;

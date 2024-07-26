@@ -10,7 +10,7 @@ public class SubPrefix {
 
         // Create prefix array
         int prefix[] = new int[number.length];
-        prefix[0] = number[0];
+        prefix[0] = number[0];  
 
         // Calculate prefix array
         for (int i = 1; i < prefix.length; i++) {
