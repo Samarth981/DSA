@@ -26,7 +26,7 @@ public class kadane {
             return;
         }
 
-        // if not nagative
+        // if positiv
         for(int i=0;i<number.length;i++){
             sum = sum + number[i];
             if(sum < 0){

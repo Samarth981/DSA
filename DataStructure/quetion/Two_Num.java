@@ -1,5 +1,5 @@
-import java.util.*;
-//leet code Q.1
+//in this type quetion first you can sort array after use algoritum
+// if alredy give sorted array then direct use.
 public class Two_Num{
     public static int[] twosum(int nums[], int target){
         int n = nums.length;

@@ -1,4 +1,5 @@
 //more optimize
+// time complex -> O(n
 
 public class kadans2{
     public static void kadanes(int arr[])
@@ -7,7 +8,8 @@ public class kadans2{
         int max=arr[0];
         for(int i=0;i<arr.length;i++)
         {
-            csum=Math.max(arr[i], csum+arr[i]);
+            int sum = csum+arr[i];
+            csum=Math.max(arr[i], sum);
             max=Math.max(csum, max);
         }
         System.out.println("Our Max SubArray sum is: "+max);

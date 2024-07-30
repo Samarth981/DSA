@@ -50,10 +50,10 @@ public class threeSum {
                     l++;
                     r--;
                     //Avoid duplicate pair
-                    while(l < r && nums[1] == nums[i-1]){
+                    while(l < r && nums[l] == nums[l-1]){
                         l++;
                     }
-                    while(l > r && nums[1] == nums[i-1]){
+                    while(l > r && nums[r] == nums[r-1]){
                         r--;
                     }
 
