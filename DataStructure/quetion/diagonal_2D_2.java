@@ -1,18 +1,19 @@
-//basic approch
-//tc = O(n^2)
-public class diagonal_2D{
+//secound best aproch
+// tc = O(n)
+public class diagonal_2D_2{
     public static int diagonal(int matrix[][]){
         int sum = 0;
-        //primary diagonal
+        
         for(int i=0; i<matrix.length;i++){
-            for(int j=0; j<matrix[0].length;j++){
-                if(i==j){
-                    sum = sum + matrix[i][j];
-                }
-                //secoundry diagonal
-                else if(i+j == matrix.length-1){
-                    sum = sum + matrix[i][j];
-                }
+            //primary diagonal
+            sum = sum + matrix[i][i];
+
+            //secoundary
+            // i+j = n-1 , so j = n-1-i
+            int j = matrix.length-1-i;
+
+            if(i!=j){
+                sum = sum + matrix[i][j];
             }
         }
         return sum;
