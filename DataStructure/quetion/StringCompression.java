@@ -34,7 +34,7 @@ class StringCompression{
         return count;
     }
     public static void main(String[] args) {
-        String str = "aaaabbbcddeee";
+        String str = "aaabbbacddeee";
         System.out.println(compress(str));
         Scanner st = new Scanner(System.in);
         String user_str = st.next();
