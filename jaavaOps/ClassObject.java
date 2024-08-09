@@ -5,7 +5,6 @@ public class ClassObject{
         System.out.println(p1.color);
         p1.setTip(5);
         System.out.println(p1.tip);
-
     }
 }
 
@@ -23,12 +22,12 @@ class Pan {
         tip = newTip;
     }
 }
-class Student{
-    String name;
-    int age;
-    float CGPA;
+// class Student{
+//     String name;
+//     int age;
+//     float CGPA;
 
-    void calculateCGPA(int phy, int math, int chem){
-        CGPA = (phy+math+chem) / 3;
-    }
-}
+//     void calculateCGPA(int phy, int math, int chem){
+//         CGPA = (phy+math+chem) / 3;
+//     }
+// }
