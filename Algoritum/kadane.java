@@ -38,7 +38,7 @@ public class kadane {
     }
 
     public static void main(String[] args) {
-        int number[] = {-2,-3,-4,-2,-5,-3};
+        int number[] = {-2,-3,4,2,-5,-3};
         kadan(number);
     }
 }

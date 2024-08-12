@@ -1,3 +1,5 @@
+//tc = O(n/2) => O(n)
+//sp = O(1)
 public class reversArray {
     public static void  revers(int number[]){
         int first = 0, last= number.length-1;

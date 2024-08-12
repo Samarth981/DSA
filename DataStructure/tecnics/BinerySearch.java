@@ -22,9 +22,33 @@ public class BinerySearch {
         }
         return -1;
     }
+
+    //using recurtion
+    //tc = O(log n)
+    //sp = O(logn)
+    public static int binerySearch_recurtion(int number[], int key,int start, int end){
+        //base
+        if(start > end){
+            return -1;
+        }
+        int mid = (start+end)/2;
+        if(number[mid] == key){
+            return mid;
+        }
+        else if(number[mid] > key){
+            return binerySearch_recurtion(number, key, start, mid-1);
+        } else{
+            return binerySearch_recurtion(number, key, mid+1, end);
+        }
+    }
+
     public static void main(String[] args) {
         int number[]={2,4,6,8,10,12,14};
         int key=4;
         System.out.println("index of number using binary search: "+ binerySearch(number, key));
+        int start = 0;
+        int end = number.length-1;
+        System.out.println("index of number using binary search: "+ binerySearch_recurtion(number, key, start, end));
+
     }
 }

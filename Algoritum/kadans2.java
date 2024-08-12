@@ -1,5 +1,5 @@
 //more optimize
-// time complex -> O(n
+// time complex -> O(n)
 
 public class kadans2{
     public static void kadanes(int arr[])

@@ -35,7 +35,7 @@ public class SubPrefix {
         System.out.println("Smallest sum: " + smallest);
     }
     public static void main(String[] args) {
-        int number[] = {2,7,11,15};
+        int number[] = {-1,2,7,11,15};
         sub(number);
     }
 }
