@@ -4,8 +4,12 @@ public class staticsKey{
         s1.SchoolName = "jvm";
         Student s2 = new Student();
         System.out.println(s2.SchoolName); //jvm becuser static olredy store jvm
+
+        Supers su = new Supers();
+        // su.Supers();
     }
 }
+
 class Student{
     String name;
     static String SchoolName;
@@ -17,5 +21,18 @@ class Student{
     }
     String getName(String name){
         return this.name;
+    }
+}
+
+//super keyword use 
+class roll{
+    roll(){ //constructor
+        System.out.println("call super");
+    }
+}
+class Supers extends roll{
+     Supers() {
+        super();
+        System.out.println("it is call");
     }
 }

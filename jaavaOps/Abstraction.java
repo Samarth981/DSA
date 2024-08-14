@@ -22,6 +22,9 @@ abstract class Animal{
     }
 
     //with abstract
+
+    //I don't konw how to walk but my child car know 
+    //that's why only clreat method and go to child class
     abstract void walk();  
     //not depend on Animal
 
