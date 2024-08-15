@@ -1,5 +1,5 @@
 public class dublicate_remove{
-    public static int remove(String str, int index, StringBuilder newstr, boolean mep[]){
+    public static void remove(String str, int index, StringBuilder newstr, boolean mep[]){
         //base
         if(str.length() == index){
             System.out.println(newstr);
@@ -11,12 +11,12 @@ public class dublicate_remove{
             //dublicate
             remove(str, index+1, newstr, mep);
         }else{
-            mep[currant-'a'] = true;
+            mep[currant-'a'] = true; //assin true if not come like arr[i] == 0
             remove(str, index+1, newstr.append(currant), mep);
         }
     }
     public static void main(String[] args) {
-        String str = "samarth";
+        String str = "sasmaarmth";
         remove(str, 0, new StringBuilder(""), new boolean[26]);
     }
 }
