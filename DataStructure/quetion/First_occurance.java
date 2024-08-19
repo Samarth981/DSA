@@ -5,10 +5,13 @@ class First_occurance{
         if(i == arr.length){
             return -1;
         }
+        int recursiveAns =  FirstTime(arr, k, i+1);
+        //check condition 
         if(arr[i] == k){
             return i;
-        }
-        return FirstTime(arr,k,i+1); 
+        } else {
+            return recursiveAns;
+        } 
     }
 
     public static int LastTime(int arr[], int k, int i){
@@ -21,7 +24,22 @@ class First_occurance{
             return i;
         }
         return find;
+
+        // or
+
+        //base
+        // if(i == 0){
+        //     return -1;
+        // }
+        // int recursiveAns =  LastTime(arr, k, i-1);
+        // //check condition 
+        // if(arr[i] == k){
+        //     return i;
+        // } else {
+        //     return recursiveAns;
+        // }
     }
+    
     public static void main(String args[] ){
         int arr[] = {2,5,6,3,2,4,1,0};
         int k = 2;
