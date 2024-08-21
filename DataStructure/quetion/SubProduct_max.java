@@ -21,7 +21,7 @@ class SubProduct_max{
     }
 
     public static void main(String args[]){
-        int arr[] = {-6,-5,-2};
+        int arr[] = {2,-5,-2,-4,3}; //but max sum is -2,-4,3 is 24 so this is not use in this case 
         System.out.println(maxProduct(arr));
     }
 }
