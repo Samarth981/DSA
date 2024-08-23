@@ -27,7 +27,7 @@ public class Merge_exm {
         return leftCount > rightCount ? left : right;   
     }
     public static void main(String args[]){
-        int arr[] = {3,2,3};
+        int arr[] = {2,1,1,2,2,1,2,1};
         System.out.println(Max_time_eli(arr, 0, arr.length-1));
     } 
 }
