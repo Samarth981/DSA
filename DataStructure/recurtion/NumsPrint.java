@@ -24,28 +24,31 @@ public class NumsPrint{
         if(n==0){
             return 1;
         }
-        int fact1 = fact(n-1);
-        int fn = n * fact1;
-        return fn;
+        // int fact1 = fact(n-1);
+        // int fn = n * fact1;
+        // return fn;
+        return n*fact(n-1); 
     }
 
     public static int  sum(int n){  //tc = O(n) , sp = O(n)
         if(n==0){
             return 0;
         }
-        int sum1 = sum(n-1);
-        int sum = n + sum1;
-        return sum;
+        // int sum1 = sum(n-1);
+        // int sum = n + sum1;
+        // return sum;
+        return n+sum(n-1);
     }
 
     public static int fibonaci(int n){
         if(n==1 || n==0){
             return n;
         }
-        int fb1 = fibonaci(n-1);
-        int fb2 = fibonaci(n-2);
-        int fb = fb1 + fb2;
-        return fb;
+        // int fb1 = fibonaci(n-1);
+        // int fb2 = fibonaci(n-2);
+        // int fb = fb1 + fb2;
+        // return fb;
+        return fibonaci(n-1) + fibonaci(n-2);
     }
     public static void main(String args[]){
         int n = 10;

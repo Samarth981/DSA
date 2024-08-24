@@ -24,7 +24,7 @@ public static void taverOfHanoi(int n, char A , char C, char B){     //A(currnt)
             return;
         }
         int lastDigit = number%10;
-        printdigits(number/10); //recursion
+        printdigits(number/10); //recursion though agine and agine last is remove and find first digit
         System.out.print(digits[lastDigit] + " ");
     }
 
@@ -55,11 +55,11 @@ public static void taverOfHanoi(int n, char A , char C, char B){     //A(currnt)
         if(str.charAt(i) == str.charAt(j)){
             res2++;
         }
-        // int res3 = subCount(str, i+1, j-1, n-2);
-        // if(str.charAt(i) == str.charAt(j)){
-        //     res3++;
-        // }
-        int res = res1+res2;
+        int res3 = subCount(str, i+1, j-1, n-2);
+        if(str.charAt(i) == str.charAt(j)){
+            res3++;
+        }
+        int res = res1+res2-res3;
         return res;
     }
 

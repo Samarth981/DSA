@@ -19,11 +19,11 @@ class First_occurance{
         if(i == arr.length){
             return -1;
         }
-        int find = LastTime(arr, k, i+1); //first occurance find and then start to secound find  
-        if(find == -1 && arr[i] == k){
+        int find = LastTime(arr, k, i+1);  
+        if(find == -1 && arr[i] == k){  //that mins recurtion ans not fount key and check first if true then return i 
             return i;
         }
-        return find;
+        return find; //that's mins recurtion ans find key and (find != -2) if condion is false and return find.
 
         // or
 
