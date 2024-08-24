@@ -21,6 +21,5 @@ public class Binery_string {
     }
     public static void main(String args[]){
         str(3, 0, new String(""));
-        // str(3, 0, new String(""));
     }
 }
