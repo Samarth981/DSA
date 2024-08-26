@@ -1,3 +1,4 @@
+//multipal time come eliment find
 public class Merge_exm {
     public static int Max_time_eli(int arr[], int start, int end){
         //base 
