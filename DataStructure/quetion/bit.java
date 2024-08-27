@@ -1,0 +1,48 @@
+//maximum day of workers work in cobination
+//tc = O(n^2)
+//sc = O(n)
+public class bit{
+    public static int max_day_work(int arr[]){
+        int maxCount = 0;
+        for(int i=0;i<arr.length-1;i++){
+            for(int j=i+1 ; j<arr.length; j++){
+                //check tow workers
+                int intersection = (arr[i] & arr[j]);
+                int count = count_coman_set(intersection);
+                maxCount = Math.max(maxCount, count);
+            }
+        }
+        return maxCount;
+    }
+    public static int count_coman_set(int n){
+        int count = 0;
+        while(n>0){
+            int LSB = n&1;
+            if(LSB == 1){
+                count++;
+            }
+            n = n>>1;
+        }
+        return count;
+    }
+
+    //day store in bit(mask) formation
+    public static int[] mask_conver(int arr[][],int days[]){
+        int numWorkers = arr.length;
+         //stor bit number in there
+        for(int i=0;i<numWorkers;i++){ 
+            int day=0; //reset day for each workers
+            for(int j=0;j<arr[i].length;j++){
+                day = day | (1<<arr[i][j]);
+            }
+            days[i] = day;
+        }
+        return days;
+    }
+    public static void main(String args[]){
+        int workers[][] = {{1,4,7,9},{2,9,1,2},{2,9,10},{1,11,29,7}};
+        int days[] = new int[workers.length];
+        mask_conver(workers, days);
+        System.out.println(max_day_work(days));
+    }
+}
