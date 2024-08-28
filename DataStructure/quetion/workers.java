@@ -1,7 +1,7 @@
 //maximum day of workers work in cobination
 //tc = O(n^2)
 //sc = O(n)
-public class bit{
+public class workers{
     //day store as a bitmask 
     public static int[] mask_conver(int arr[][],int days[]){
         int numWorkers = arr.length;
