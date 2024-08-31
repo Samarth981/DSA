@@ -1,3 +1,4 @@
+//https://haseebq.com/n-queens-visualizer/
 public class N_Queen {
     public static void nQueen(char  arr[][] , int i){
         //base
@@ -20,7 +21,7 @@ public class N_Queen {
                 // });
                 //other area is empty
             }
-            arr[i][j] = '_'; //if false then empty then call j++
+            arr[i][j] = '_'; //if false then empty then call j++ //back tracking
         }
         
     }
@@ -49,7 +50,7 @@ public class N_Queen {
     
     static int  count = 0;
     public static void main(String args[]){
-        int n=4;
+        int n=10;
         char arr[][] = new char[n][n];
 
         //initialize all empty
