@@ -1,38 +1,42 @@
 //assinment queteion 1
 public class grid_2 {
     public static boolean isSafe(int arr[][] , int row, int collum){
-        if(row + 1 < arr.length && arr[row+1][collum] != 1){
-            return false;
-        }else if(collum + 1 < arr[0].length && arr[row][collum+1] != 1){
-            return false;
-        }
-        return true;
-    }
-    public static boolean parth(int arr[][] , int row, int collum,int sol[][]){
-        //base
-        if(row == arr.length-1 && collum == arr[0].length-1 && arr[row][collum] == 1  /* if 0 exist in qution then false*/){
-            sol[row][collum] = 1; //not change one and call next
+        //mage end or not 
+        //[0,n-1) and one then true if 0 then false
+        //arr[row][collum]==1 check like i+1 index 1 then move otherwis false
+        if( row>=0 && row<arr.length && collum>=0 && collum<arr.length && arr[row][collum]==1){
             return true;
-        }
-        //recurtion
-        if (row < arr.length && collum < arr[0].length && arr[row][collum] == 1) {
-            sol[row][collum] = 1;
-
-            // Move down
-            if (parth(arr, row + 1, collum, sol)) {
-                return true;
-            }
-
-            // Move right
-            if (parth(arr, row, collum + 1, sol)) {
-                return true;
-            }
-
-            // Backtrack if neither down nor right works
-            sol[row][collum] = 0;
         }
         return false;
     }
+
+
+    public static boolean parth(int arr[][] , int row, int collum,int sol[][]){
+        //base
+        if(row == arr.length-1 && collum == arr.length-1 && arr[row][collum] == 1){
+            sol[row][collum] = 1;  //boundry 0 exist then not store and 1 exist then store
+            return true;
+        }
+
+        //recurtion
+            if(isSafe(arr, row, collum)){
+                //if safe then first put this position 1
+                if(sol[row][collum] == 1){  // track of the cell if it has been visited or not
+                    return false; //If already visited then no need to traverse further from that cell
+                }
+                sol[row][collum] = 1; //store one and next line call
+                if(parth(arr, row+1, collum, sol)){
+                    return true;
+                }
+                if(parth(arr, row, collum+1, sol)){
+                    return true;
+                }
+                sol[row][collum] = 0;
+                return  false;
+            }
+        return false;
+        }
+
     public static void printSolution(int sol[][]){
         for(int i=0;i<sol.length;i++) {
             for(int j=0;j<sol.length;j++) {
@@ -49,10 +53,9 @@ public class grid_2 {
         {1, 1, 1, 1}
     };
         int solution[][] = new int[4][4];
-        if (parth(arr, 0, 0, solution)) {
-            printSolution(solution);
-        } else {
+        if (parth(arr, 0, 0, solution) == false) {
             System.out.println("No solution found");
         }
+        printSolution(solution);
     }
 }
