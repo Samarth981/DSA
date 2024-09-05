@@ -18,8 +18,8 @@ public class SubPrefix {
         }
 
         // Calculate subarray sums using prefix array
-        for (int i = 0; i < number.length; i++) {
-            for (int j = i; j < number.length; j++) {   
+        for (int i = 0; i < number.length; i++) {   //start
+            for (int j = i; j < number.length; j++) {   //end
                 sum = i == 0 ? prefix[j] : prefix[j] - prefix[i - 1];
 
                 if (sum > largest) {

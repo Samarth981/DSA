@@ -16,4 +16,8 @@ class Strings{
         String str = "racecar";
         System.out.println(palindrome(str));
     }
+    public void append(Strings number) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'append'");
+    }
 }
