@@ -114,6 +114,7 @@ public class LinkedList{
         size--;
         return val;
     }
+    
     //method6 - print link list
     public void print(){
         if(head == null){
