@@ -1,5 +1,6 @@
 // tc = n(logn)
 // sc = O(1)
+//search sorted & rotated string.
 public class Quicks_exm{
     public static int Search(int arr[],int start,int end,int key){
         int mid = start + (end - start)/2;
