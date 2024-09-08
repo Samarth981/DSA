@@ -51,7 +51,7 @@ public static void taverOfHanoi(int n, char A , char C, char B){     //A(currnt)
         if(str.charAt(i) == str.charAt(j)){
             res1++;
         }
-        int res2 = subCount(str, i+1, j, n-1);
+        int res2 = subCount(str, i, j-1, n-1);
         if(str.charAt(i) == str.charAt(j)){
             res2++;
         }
