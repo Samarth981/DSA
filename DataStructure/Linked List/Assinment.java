@@ -1,4 +1,5 @@
 //use can creat linkedlist using OOPS concept and this is in belo
+
 class llnode{
     public int data;
     public llnode next;
@@ -103,6 +104,95 @@ public class Assinment {
             prev = curr;
             curr = curr.next;
         }
+    }
+
+    //Q-5 (n*k) =tc
+    public static llnode merge2List(llnode l1, llnode l2){
+        if(l1 == null) {return l2;}
+        if(l2 == null) {return l1;}
+
+        llnode mergeAll = null;
+        llnode temp = mergeAll;
+        while(l1!= null && l2!= null){
+            if(l1.data <= l2.data){
+                temp.next = l1;
+                //updat
+                l1 = l1.next;
+                temp = temp.next;
+            }else{
+                temp.next = l2;
+                //updat
+                l2 = l2.next;
+                temp = temp.next;
+            }
+        }
+        while(l1 != null){
+            temp.next = l1;
+            //updat
+            l1 = l1.next;
+            temp = temp.next;
+        }
+        while(l2 != null){
+            temp.next = l2;
+            //updat
+            l2 = l2.next;
+            temp = temp.next;
+        }
+        return mergeAll.next;
+    }
+
+    
+    //or (nlogk)
+//     public static ListNode merge2List(ListNode l1, ListNode l2){
+//         ListNode dummy = new ListNode(-1);
+//         ListNode current = dummy;
+
+//     while (l1 != null && l2 != null) {
+//         if (l1.val <= l2.val) {
+//             current.next = l1;
+//             l1 = l1.next;
+//         } else {
+//             current.next = l2;
+//             l2 = l2.next;
+//         }
+//         current = current.next;
+//     }
+
+//     if (l1 != null) {
+//         current.next = l1;
+//     }
+//     if (l2 != null) {
+//         current.next = l2;
+//     }
+
+//     return dummy.next;
+//     }
+//     public ListNode mergeKLists(ListNode[] lists) {
+//         if(lists.length == 0)  {return null;}
+//         if(lists.length == 1)  {return lists[0];}
+//         int interval = 1;
+//         int k = lists.length;
+
+//         while (interval < k) {
+//             for (int i = 0; i + interval < k; i += interval * 2) {
+//                 lists[i] = merge2List(lists[i], lists[i + interval]);
+//             }
+//             interval *= 2;
+//         }
+//         return lists[0];
+//  }
+
+    public static llnode margeList(llnode[] lists){
+        if(lists.length == 0)  {return null;}
+        if(lists.length == 1)  {return lists[0];}
+
+        llnode newNode = merge2List(lists[0], lists[1]);
+
+        //merge agine for 3 list
+        for(int i=2; i<lists.length; i++){
+            newNode = merge2List(newNode, lists[1]);
+        }
+        return newNode;
     }
    public static void main(String[] args) {
         //creat 
