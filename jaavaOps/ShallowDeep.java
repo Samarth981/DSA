@@ -4,24 +4,27 @@ public class ShallowDeep{
         s1.marks[0] = 90;
         s1.marks[1] = 100;
         s1.marks[2] = 50;
-
+        
         //shallow
         Student s2 = new Student(s1);
 
+        System.out.println("this is shallow");
         s1.marks[1] = 20; 
-
         for(int i=0 ; i<3 ; i++){
             System.out.println(s2.marks[i]);
         } 
+        System.out.println("...........");
 
         //deep copy
         Student s3 = new Student(s1 , "deep");
         s1.marks[2] = 40;
         for(int i=0 ; i<3 ; i++){
-            System.out.println(s3.marks[i]); //not change 40
+            System.out.println(s3.marks[i]); //not change 40 in orignal
         } 
+        System.out.println("...........");
 
         //agine print s2 
+        System.out.println("deepcopy is not change 40 but shallow change ");
          for(int i=0 ; i<3 ; i++){
             System.out.println(s2.marks[i]); //this is change and 40
         } 
