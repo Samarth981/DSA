@@ -1,5 +1,5 @@
-//this is function overloading
-//same methdoverloading (compile time)
+//this is function overloading (compile time)
+//same methdoverloading 
 
 //mathod overriding  (run time)
 public class methodOverloading{
