@@ -1,3 +1,4 @@
+
 public class ShallowDeep{
     public static void main(String args[]){
         Student s1 = new Student();
@@ -30,7 +31,13 @@ public class ShallowDeep{
         } 
 
 
+// Shallow Copy: When you shallow copy an object, you're copying the reference to the object's fields, 
+// but strings are immutable in Java, meaning that once a String object is created, it cannot be modified. 
+// When you change s5.name = "samarth";, you're assigning a new String object to s5.name, not modifying the original string.
 
+// Immutable Strings: Since Java strings are immutable, the original name field of s2 remains unchanged, 
+// even though both s5 and s6 were referencing the same string initially. When you assign s5.name = "samarth";, 
+// you’re pointing s5.name to a new string "samarth", while s6.name still points to the old string "gfdhytd".
 
         Strings s5 = new Strings("gfdhytd", 3);
         System.out.println(s5.name);  // Output: gfdhytd
