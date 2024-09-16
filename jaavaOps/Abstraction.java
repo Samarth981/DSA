@@ -31,7 +31,7 @@ abstract class Animal{
     //creat constructor
     String color;
     Animal(){  
-        // color = "brown";  //if not apply change color then by default brow
+        // color = "brown";  //if not apply change color then by default brown
         System.out.println("Animal constructor is call"); 
     }
 }
