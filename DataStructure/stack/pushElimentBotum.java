@@ -3,7 +3,7 @@ public class pushElimentBotum { //AMAZON
     public static void pussAtbotum(Stack<Integer> s, int data ){
         if(s.isEmpty()){
             s.push(data);
-            return;
+            return; 
         }
         int top = s.pop();
         pussAtbotum(s, data);

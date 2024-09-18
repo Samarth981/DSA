@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class  Impliment{
     //stack implimentation in arraylist 
     static class stackArrLi{
-        //creat Arraylist
+        //creat Arr1aylist
         static ArrayList<Integer> a = new ArrayList<>();
 
         //isEmpty()
