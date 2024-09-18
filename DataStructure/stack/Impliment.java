@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class  Impliment{
     //stack implimentation in arraylist 
@@ -73,7 +72,7 @@ public class  Impliment{
     }
     public static void main(String args[]){
         //creat stack
-        stackArrLi s = new stackArrLi(); 
+        stackArrLi s = new stackArrLi();
         s.push(1);
         s.push(2);
         s.push(3);
