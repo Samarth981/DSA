@@ -49,8 +49,10 @@ public class impliment {
             return arr[0];
         }
     }
-    
-    static class linkLists{
+
+    //implimeent throue link list -> simple > remove = in front , add = in last, peek = head.data;
+    // O(1)
+    static class linkLists{  
         class Node {
             int data;
             Node next;
