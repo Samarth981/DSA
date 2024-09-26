@@ -2,6 +2,8 @@
 // Queue assinment- Q- 5
 import java.util.Deque;
 import java.util.LinkedList;
+// Time Complexity  : o(n)
+// Space Complexity: o(k)
 
 public class SlidingWindow {
 

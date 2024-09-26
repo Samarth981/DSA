@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Assinment {
+public class decToBins {
 
     //Generate Binary numbers
     public static void desToBin(int n){
