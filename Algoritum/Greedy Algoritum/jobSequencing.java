@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class jobSequencing{
@@ -10,10 +9,10 @@ public class jobSequencing{
         int profit;
         int id; //0,1,2,...
 
-        public job(int i, int dedline, int profit){
+        public job(int i, int d, int p){
             id = i;
-            dedline = dedline;
-            profit = profit;
+            dedline = d;
+            profit = p;
         }
     }
     public static void main(String args[]){
@@ -41,7 +40,7 @@ public class jobSequencing{
         }
 
         System.out.println("max job = " + seq.size());
-        for(int i=0; i<jobs.size(); i++){
+        for(int i=0; i<seq.size(); i++){
             System.out.print(seq.get(i) + " ");
         }
         System.out.println();
