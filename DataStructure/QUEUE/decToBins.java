@@ -14,6 +14,7 @@ public class decToBins {
             String s2 = s1;
             q.add(s1 + "0"); //even
             q.add(s2 + "1"); //odd
+            n--;
         }
     }
     public static void main(String[] args) {
