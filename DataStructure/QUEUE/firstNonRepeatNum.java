@@ -16,7 +16,7 @@ public class firstNonRepeatNum {
             if(q.isEmpty()){
                 System.out.println("-1");
             }else{
-                System.err.println(q.peek());
+                System.out.println(q.peek());
             }
         }
         System.out.println();
