@@ -27,12 +27,12 @@ public class createTree_3 {
             return newNode;
         }
 
-        public static void prieOrder(Node root) {
+        public static void postOrder(Node root) {
             if (root == null) {
                 return;
             }
-            prieOrder(root.left);
-            prieOrder(root.right);
+            postOrder(root.left);
+            postOrder(root.right);
             System.out.println(root.data);
         }
     }
@@ -42,6 +42,6 @@ public class createTree_3 {
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
 
-        tree.prieOrder(root);
+        tree.postOrder(root);
     }
 }
