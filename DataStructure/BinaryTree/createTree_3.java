@@ -1,4 +1,4 @@
-//create tree using inorder
+//create tree using postorder
 public class createTree_3 {
     static class Node {
         int data;
