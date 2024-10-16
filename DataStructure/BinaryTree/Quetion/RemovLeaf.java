@@ -1,4 +1,3 @@
-//this code not run in this file but removeLeaf function code is write so please focuse only logic in this code.
 public class RemovLeaf {
     static class Node {
         int data;
@@ -51,7 +50,7 @@ public class RemovLeaf {
     }
 
     public static void main(String[] args) {
-        int nodes[] = { 5, 3, 8, 3, -1, 7, 9, -1, -1, -1, -1, -1, -1 };
+        int nodes[] = { 5, 3, 8, -1, -1, 7, 3 };
         Node root = BuildTree.build(nodes);
         int target = 3;
         root = RemovLeaf(root, target);
