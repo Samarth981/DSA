@@ -20,10 +20,13 @@ class First_occurance{
             return -1;
         }
         int find = LastTime(arr, k, i+1);  
-        if(find == -1 && arr[i] == k){  //that mins recurtion ans not fount key and check first if true then return i 
+        if(find != -1){
+            return find; //that means fist time key to next not any key find 
+        }
+        if(arr[i] == k){ //check first if true then return i 
             return i;
         }
-        return find; //that's mins recurtion ans find key and (find != -2) if condion is false and return find.
+        return find; //cur is key
 
         // or
 

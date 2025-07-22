@@ -1,8 +1,9 @@
 import java.util.*;
+
 public class TrapRain {
-    //same stackspan logic for trap rain water using stack 
-    //this is not use for solve this problem only understanding of stack 
-    //video - https://www.youtube.com/watch?v=lhzrp3Nbj-w&t=277s
+    // same stackspan logic for trap rain water using stack
+    // this is not use for solve this problem only understanding of stack
+    // video - https://www.youtube.com/watch?v=lhzrp3Nbj-w&t=277s
     public static int trapWater(int[] h) {
         Stack<Integer> stack = new Stack<>();
         int trappedWater = 0;
@@ -26,8 +27,9 @@ public class TrapRain {
         }
         return trappedWater;
     }
-    public static void main(String args[]){
-        int h[] = {4, 2, 0, 6, 3, 2, 5};
+
+    public static void main(String args[]) {
+        int h[] = { 4, 2, 0, 6, 3, 2, 5 };
         System.out.println("Trapped water is: " + trapWater(h)); // Expected output: 10
     }
 }

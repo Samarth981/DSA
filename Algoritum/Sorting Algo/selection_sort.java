@@ -3,16 +3,16 @@ public class selection_sort {
         int n = num.length;
         for(int turn=0; turn<n-1;turn++){
             //find max eliment
-            int max_num = 0;
-            for(int i = 0; i<=n-1-turn ;i++){
-                if(num[max_num] < num[i]){
-                    max_num = i;
+            int min_num = turn;
+            for(int i = turn+1; i<=n ;i++){
+                if(num[min_num] >  num[i]){
+                    min_num = i;
                 }
             }
             //swap
-            int temp = num[n-1-turn];
-            num[n-1-turn] = num[max_num];
-            num[max_num] = temp;
+            int temp = num[min_num];
+            num[min_num] = num[turn];
+            num[turn] = temp;
         }
     }
 

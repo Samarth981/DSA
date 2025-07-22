@@ -63,6 +63,11 @@ public static void taverOfHanoi(int n, char A , char C, char B){     //A(currnt)
         return res;
     }
 
+    //Q-4 OR
+    public static int subcount2(String str,int i, int j, int n){
+        
+    }
+
     public static void main(String args[]){
         int n;
         taverOfHanoi(3, 'A', 'C', 'B');

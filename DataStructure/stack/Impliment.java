@@ -1,85 +1,102 @@
 
 import java.util.ArrayList;
+import java.util.Stack;
 
-public class  Impliment{
-    //stack implimentation in arraylist 
-    static class stackArrLi{
-        //creat Arr1aylist
+public class Impliment {
+    // stack implimentation in arraylist
+    static class stackArrLi {
+        // creat Arr1aylist
         static ArrayList<Integer> a = new ArrayList<>();
 
-        //isEmpty()
+        // isEmpty()
         public static boolean isEmpty() {
-        return a.size() == 0;
-        } 
+            return a.size() == 0;
+        }
 
-        //push
-        public static void push(int data){
+        // push
+        public static void push(int data) {
             a.add(data);
         }
 
-        //pop
-        public static int pop(){
+        // pop
+        public static int pop() {
             int top = a.get(a.size() - 1);
             a.remove(a.size() - 1);
             return top;
         }
 
-        //peek
-        public static int peek(){
+        // peek
+        public static int peek() {
             return a.get(a.size() - 1);
         }
     }
-    
-    
-    static class stackLinkList{
-        static class Node{
+
+    static class stackLinkList {
+        static class Node {
             int data;
             Node next;
-            Node(int data){
+
+            Node(int data) {
                 this.data = data;
                 this.next = null;
             }
         }
-        //stack impliment using linklist
+
+        // stack impliment using linklist
         static Node head = null;
-        
-        public static boolean isEmpty(){
+
+        public static boolean isEmpty() {
             return head == null;
         }
-        public static void push(int data){
+
+        public static void push(int data) {
             Node newNode = new Node(data);
-            if(isEmpty()){
+            if (isEmpty()) {
                 head = newNode;
                 return;
             }
             newNode.next = head;
             head = newNode;
         }
-        public static int pop(){
-            if(isEmpty()){
+
+        public static int pop() {
+            if (isEmpty()) {
                 return -1;
             }
             int top = head.data;
             head = head.next;
             return top;
         }
-        public static int peek(){
-            if(isEmpty()){
+
+        public static int peek() {
+            if (isEmpty()) {
                 return -1;
             }
             return head.data;
-        }  
+        }
     }
-    public static void main(String args[]){
-        //creat stack
+
+    public static void main(String args[]) {
+        // creat stack
         stackArrLi s = new stackArrLi();
         s.push(1);
         s.push(2);
         s.push(3);
 
-        while(!s.isEmpty()) {
+        while (!s.isEmpty()) {
             System.out.println(s.peek());
             s.pop();
         }
+
+        // using java fremwork
+        Stack<Integer> sa = new Stack<>();
+        sa.push(1);
+        sa.push(2);
+        sa.push(3);
+        sa.push(4);
+        while (!sa.isEmpty()) {
+            System.out.println(s.pop());
+        }
+
     }
 }

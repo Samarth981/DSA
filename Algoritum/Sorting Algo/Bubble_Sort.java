@@ -29,6 +29,23 @@ public class Bubble_Sort{
         }
     }
 
+    public static void insertion(int num[]){
+        int n = num.length;
+        for(int i=1; i<n;i++){
+           int unsorted_pick_ele = num[i];
+           int preveous_ele = i-1; //last sorted eliment
+
+           //find correct possion of insertion
+           while(preveous_ele >= 0 && num[preveous_ele] > num[unsorted_pick_ele]){
+            num[preveous_ele+1] = num[preveous_ele]; //current hato tya 
+            preveous_ele--;
+           }
+           //push in correct possion
+           num[preveous_ele+1] = unsorted_pick_ele;
+
+        }
+    }
+
     public static void prints(int num[]){
         for(int i=0 ; i<num.length;i++){
             System.out.print(num[i] + " ");
