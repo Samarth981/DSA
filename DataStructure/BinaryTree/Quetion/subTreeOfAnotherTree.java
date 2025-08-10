@@ -26,14 +26,15 @@ public class subTreeOfAnotherTree {
             return newNode;
         }
 
-        public static boolean isIdentical(Node root, Node subRoot) {
-            if (root == null && subRoot == null) {
+        //MachNode  =  Those node is a actual tree node where data is match for subtree root. 
+        public static boolean isIdentical(Node MachNode, Node subRoot) {
+            if (MachNode == null && subRoot == null) { //both null then isIdentical
                 return true;
-            } else if (root == null || subRoot == null || root.data != subRoot.data) {
+            } else if (MachNode == null || subRoot == null || MachNode.data != subRoot.data) { //if both are not null 
                 return false;
             }
 
-            return isIdentical(root.left, subRoot.left) && isIdentical(root.right, subRoot.right);
+            return isIdentical(MachNode.left, subRoot.left) && isIdentical(MachNode.right, subRoot.right);
         }
 
         public static boolean isSubtree(Node root, Node subRoot) {

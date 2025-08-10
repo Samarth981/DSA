@@ -37,6 +37,24 @@ public class createTree {
             preorder(root.left); // print all left subtree
             preorder(root.right); // print all right subtree
         }
+
+         public static void inorder(Node root) {
+            if (root == null) {
+                return;
+            }
+            inorder(root.left);
+            System.out.println(root.data);
+            inorder(root.right);
+        }
+
+        public static void postOrder(Node root) {
+            if (root == null) {
+                return;
+            }
+            postOrder(root.left);
+            postOrder(root.right);
+            System.out.println(root.data);
+        }
     }
 
     public static void main(String[] args) {

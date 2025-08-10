@@ -70,7 +70,7 @@ public class Hight {
             int rightDiam = diameter(root.right);
             int rightHight = Hight(root.right);
 
-            int selftDiam = leftHight + rightDiam + 1;
+            int selftDiam = leftHight + rightHight + 1;
 
             return Math.max(selftDiam, Math.max(leftDiam, rightDiam));
         }
