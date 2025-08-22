@@ -12,19 +12,12 @@ public class DeleteNode {
         inOrder(root.right);
     }
 
-    public static Node findInorderSuccessor(Node root) {
-        while (root.left != null) {
-            root = root.left;
-        }
-        return root;
-    }
-
     public static Node delete(Node root, int val) {
         if (root == null) {
-            return null; // Value not found, return null
+            return null;
         }
 
-        // Search for the node to delete
+        // Find the node you want to remove.
         if (val < root.data) {
             root.left = delete(root.left, val);
         } else if (val > root.data) {
@@ -43,11 +36,20 @@ public class DeleteNode {
             }
 
             // Case 3: Both children
-            Node successor = findInorderSuccessor(root.right);
+            Node successor = findInorderSuccessor(root.right); //left most node in right subtree thats why root.right
             root.data = successor.data; // Replace with inorder successor
             root.right = delete(root.right, successor.data); // Delete the successor
         }
         return root; // Return the updated root
+    }
+    
+    public static Node findInorderSuccessor(Node root) {
+
+        //left most node in Right subtree
+        while (root.left != null) {
+            root = root.left;
+        }
+        return root;
     }
 
     public static void printInRange(Node root, int k1, int k2) {
@@ -68,7 +70,7 @@ public class DeleteNode {
 
     public static void main(String[] args) {
         int value[] = { 8, 5, 3, 1, 4, 6, 10, 11, 14 };
-        Node root = null;
+        Node  root = null;
 
         for (int i = 0; i < value.length; i++) {
             root = BinaryTree.buildBST(root, value[i]);

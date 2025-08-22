@@ -1,5 +1,6 @@
 import java.util.*;
-
+import TreeUtils.BinaryTree;
+import TreeUtils.Node;
 public class BstToBalanceBST {
     public static void preOrder(Node root) {
         if (root == null) {
@@ -36,7 +37,7 @@ public class BstToBalanceBST {
         ArrayList<Integer> inorder = new ArrayList<>();
         getInorder(root, inorder);
 
-        // sorted inorder -> balnaceBst O(n)
+        // sorted inorder -> balanceBst O(n)
         root = sortBST(inorder, 0, inorder.size() - 1);
         return root;
     }
