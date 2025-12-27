@@ -71,7 +71,34 @@ public class Insertion{
 
             return data;
         }
-        
+
+        // ============================
+        // Max-heapify using << and >>
+        // ============================
+        private void max_heapify_top(int i) {
+            int left = (i << 1) + 1;    // left child = 2*i + 1
+            int right = (i << 1) + 2;   // right child = 2*i + 2
+            int maxInd = i;
+
+            if (left < arr.size() && arr.get(maxInd) < arr.get(left)) {
+                maxInd = left;
+            }
+            if (right < arr.size() && arr.get(maxInd) < arr.get(right)) {
+                maxInd = right;
+            }
+            //like i=0 but after upper two condition check maxInd is change to like 2
+            //Call max_heapify(0):
+            // i = 0 → value = 10
+            // left = 1 → value = 5
+            // right = 2 → value = 30
+            // Compare left: 10 < 5   → maxInd still 0.
+            // Compare right: 10 < 30 → maxInd = 2.
+            // Since maxInd != i → swap 10 with 30.
+            if (maxInd != i) {
+                swap(i, maxInd);
+                max_heapify_top(maxInd);
+            }
+        }
     }
   public static void main(String[] args) {
     Heap h = new Heap();
